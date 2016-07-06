@@ -19,15 +19,16 @@ namespace LoginNavigationSample
 				    || passwordEntry.Text.ToLower().Equals("password"))
 				{
 					//Login Successful
-					Navigation.PopModalAsync();
+					App.Current.MainPage = new NavigationPage(new Home());
 				}
 				else {
-					//Login Failed
+					//Login Failed - Credentials did not match
 					DisplayAlert("Login Fail", "Please recheck your credentials", "Ok");
 
 				}
 			}
 			else {
+				//Not all fields were completed
 				DisplayAlert("Login Fail", "Please make sure all fields are complete", "Ok");
 			}
 
