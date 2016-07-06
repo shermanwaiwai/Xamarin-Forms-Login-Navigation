@@ -31,5 +31,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)SettingsPage.xaml.cs">
       <DependentUpon>SettingsPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ICredentialStore.cs" />
   </ItemGroup>
 </Project>

@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using Xamarin.Auth;
+using Xamarin.Forms;
 
 namespace LoginNavigationSample
 {
@@ -11,14 +12,17 @@ namespace LoginNavigationSample
 
 		void Login_Clicked(object sender, System.EventArgs e)
 		{
+			string username = usernameEntry.Text.ToLower();
+			string password = passwordEntry.Text.ToLower();
 			//Simulate Login
-			if (!string.IsNullOrEmpty(usernameEntry.Text) &&
-			    !string.IsNullOrEmpty(passwordEntry.Text))
+			if (!string.IsNullOrEmpty(username) && !string.IsNullOrEmpty(password))
 			{
-				if (usernameEntry.Text.ToLower().Equals("username")
-				    && passwordEntry.Text.ToLower().Equals("password"))
+				if (username.Equals("username")&& password.Equals("password"))
 				{
-					//Login Successful
+					//Save user credentials
+					DependencyService.Get<ICredentialStore>().Save(username, password);
+
+					//Navigate to Home
 					App.Current.MainPage = new NavigationPage(new Home());
 				}
 				else {

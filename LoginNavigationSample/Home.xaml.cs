@@ -19,6 +19,9 @@ namespace LoginNavigationSample
 
 		void Logout_Clicked(object sender, System.EventArgs e)
 		{
+			//Remove user from cache
+			DependencyService.Get<ICredentialStore>().Delete();
+			//Navigate back to LoginPage
 			App.Current.MainPage = new LoginPage();
 		}
 

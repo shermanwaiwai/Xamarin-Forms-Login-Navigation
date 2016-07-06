@@ -4,12 +4,12 @@ namespace LoginNavigationSample
 {
 	public partial class App : Application
 	{
-		private bool isLoggedIn = false;
+		private bool isLoggedIn = true;
 		public App()
 		{
 			InitializeComponent();
 
-			if (isLoggedIn){
+			if (DependencyService.Get<ICredentialStore>().isLoggedIn()){
 				MainPage = new NavigationPage(new Home());
 			}
 			else {
