@@ -4,7 +4,7 @@
 
 You can't use Login screen as a Navigation Page because the back button would appear in subsequent screens.  So, after doing some research, one solution I came up with was to actually go directly to my Home screen as a NavigationPage. When the user reaches the Home screen, they will be immediately redirected to the Login screen if not already logged in.  The Login screen would be pushed modally, and after successful login, would just be popped off of the stack taking the user to the Home screen and normal engagement.  If the user wanted to logout for instance, the Login screen could be pushed modally again, and the idea continues.  
 
-All in all, this sample follows that idea to allow the user to login, then navigate to the home screen.  You can see the flow in the screenshots below.
+All in all, this sample follows that idea to allow the user to login, then navigate to the home screen.  You can see the flow in the screenshots below.  This is a bare bones application just to stress the basics of navigation for this scenario.  There's no MVVM architecture, fancy UI, etc. Just the necessary pieces for navigation.
 
 ## **How to Use**
 
