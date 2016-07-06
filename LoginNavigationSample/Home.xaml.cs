@@ -16,6 +16,14 @@ namespace LoginNavigationSample
 		{
 			Navigation.PushAsync(new SettingsPage());
 		}
+
+		void Logout_Clicked(object sender, System.EventArgs e)
+		{
+			App.Current.MainPage = new LoginPage();
+		}
+
+
+
 	}
 }
 

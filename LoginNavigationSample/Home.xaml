@@ -7,6 +7,8 @@
 		<StackLayout Padding = "25,50">
 			<Button x:Name="settingsButton" Text= "Settings" HorizontalOptions="Center" VerticalOptions="Center"
 					Clicked="Settings_Clicked"/>
+			<Button x:Name="logoutButton" Text="Logout" HorizontalOptions="Center"
+				Clicked="Logout_Clicked"/>
 		</StackLayout>
 	</ContentPage.Content>
 </ContentPage>
