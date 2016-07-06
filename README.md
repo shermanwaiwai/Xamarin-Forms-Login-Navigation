@@ -4,7 +4,7 @@
 
 You can't use Login screen as a Navigation Page because the back button would appear in subsequent screens.  So, after doing some research, one solution I came up with was to actually go directly to my Home screen as a NavigationPage. When the user reaches the Home screen, they will be immediately redirected to the Login screen if not already logged in.  The Login screen would be pushed modally, and after successful login, would just be popped off of the stack taking the user to the Home screen and normal engagement.  If the user wanted to logout for instance, the Login screen could be pushed modally again, and the idea continues.  
 
-All in all, this sample follows that idea to allow the user to login, then navigate to the home screen.  You can see the flow in the screenshots below.
+All in all, this sample follows that idea to allow the user to login, then navigate to the home screen.  When the user does log in, his credentials are saved locally using Xamarin.Auth.  When he opens the app the following time, he bypasses login and is taken directly to the home page.  You can see the flow in the screenshots below.
 
 ## **How to Use**
 
