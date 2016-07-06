@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:LoginNavigationSample" x:Class="LoginNavigationSample.LoginPage">
+
+	<StackLayout Padding = "25,50" >
+		<Label x:Name="titleLabel" Text = "Login Page" FontSize="42" HorizontalOptions = "Center" 
+			VerticalOptions="StartAndExpand" TextColor="#3498DB"/>
+		<Entry x:Name = "usernameEntry" Placeholder="Username" HorizontalOptions = "Fill" 
+			VerticalOptions = "CenterAndExpand" />
+		<Entry x:Name = "passwordEntry" Placeholder="Password" HorizontalOptions = "Fill" IsPassword="true" 
+			VerticalOptions = "StartAndExpand"/>
+		<Button x:Name="loginButton" Text = "Login" Clicked="Login_Clicked" HorizontalOptions = "Center"
+			VerticalOptions = "StartAndExpand" FontSize="24"/>
+	</StackLayout>
+</ContentPage>
