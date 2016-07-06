@@ -4,10 +4,17 @@ namespace LoginNavigationSample
 {
 	public partial class App : Application
 	{
+		private bool isLoggedIn = false;
 		public App()
 		{
 			InitializeComponent();
-			MainPage = new NavigationPage(new Home());
+
+			if (isLoggedIn){
+				MainPage = new NavigationPage(new Home());
+			}
+			else {
+				MainPage = new LoginPage();
+			}
 		}
 
 		protected override void OnStart()

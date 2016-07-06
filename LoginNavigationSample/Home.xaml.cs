@@ -10,7 +10,6 @@ namespace LoginNavigationSample
 		public Home()
 		{
 			InitializeComponent();
-			Navigation.PushModalAsync(new LoginPage());
 		}
 
 		void Settings_Clicked(object sender, System.EventArgs e)

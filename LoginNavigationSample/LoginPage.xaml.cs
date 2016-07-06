@@ -16,15 +16,14 @@ namespace LoginNavigationSample
 			    !string.IsNullOrEmpty(passwordEntry.Text))
 			{
 				if (usernameEntry.Text.ToLower().Equals("username")
-				    || passwordEntry.Text.ToLower().Equals("password"))
+				    && passwordEntry.Text.ToLower().Equals("password"))
 				{
 					//Login Successful
-					Navigation.PopModalAsync();
+					App.Current.MainPage = new NavigationPage(new Home());
 				}
 				else {
 					//Login Failed
 					DisplayAlert("Login Fail", "Please recheck your credentials", "Ok");
-
 				}
 			}
 			else {
